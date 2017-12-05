@@ -1,0 +1,33 @@
+{
+  "name": "twitter-followers",
+  "version": "0.1.0",
+  "description": "Get the list of Twitter followers of a specific user",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xaqron/twitter-followers.git"
+  },
+  "keywords": [
+    "Twitter",
+    "followers"
+  ],
+  "author": "Xaqron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xaqron/twitter-followers/issues"
+  },
+  "homepage": "https://github.com/Xaqron/twitter-followers#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "standard": "*",
+    "cspell": "*",
+    "jsdoc": "*",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
