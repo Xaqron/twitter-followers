@@ -6,13 +6,13 @@
  * @param {Array} followers - Array of followers' IDs.
  * @param {int} cursor - Twitter cursor.
  */
-function getFollowers (T, screenName, interval = 15 * 60 * 1000, followers = [], cursor = -1) {
+function getFollowers (T, screenName, interval = 5 * 62 * 1000, followers = [], cursor = -1) {
   return new Promise((resolve, reject) => {
     T.get('followers/ids', { screen_name: screenName, cursor: cursor, count: 5000 }, (err, data, response) => {
       if (err) {
         if (err.message === 'Rate limit exceeded') {
           setTimeout(() => {
-            getFollowers(T, screenName, interval, followers, cursor)
+            return resolve(getFollowers(T, screenName, interval, followers, cursor))
           }, interval)
         } else {
           cursor = -1
