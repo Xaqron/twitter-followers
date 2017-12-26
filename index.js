@@ -8,7 +8,7 @@
  */
 function getFollowers (T, screenName, interval = 5 * 62 * 1000, followers = [], cursor = -1) {
   return new Promise((resolve, reject) => {
-    T.get('followers/ids', { screen_name: screenName, cursor: cursor, count: 5000 }, (err, data, response) => {
+    T.get('followers/ids', { screen_name: screenName, stringify_ids: true, cursor: cursor, count: 5000 }, (err, data, response) => {
       if (err) {
         if (err.message === 'Rate limit exceeded') {
           setTimeout(() => {
