@@ -1,6 +1,6 @@
 {
   "name": "twitter-followers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Get the list of Twitter followers of a specific user",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "cspell": "*",
     "jsdoc": "*",
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "mocha": "^5.0.5"
   }
 }
